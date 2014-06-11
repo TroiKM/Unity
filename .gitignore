@@ -21,6 +21,9 @@ $RECYCLE.BIN/
 # OSX
 # =========================
 
+.rar
+.zip
+
 .DS_Store
 .AppleDouble
 .LSOverride
