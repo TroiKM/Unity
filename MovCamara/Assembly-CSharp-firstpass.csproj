@@ -49,7 +49,9 @@
      <Compile Include="Assets\Standard Assets\Scripts\Code\CamRecta.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Code\CollisionCamera.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Code\MovCam.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Code\MovCursor.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Code\MovPunta.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Code\TouchInput.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
