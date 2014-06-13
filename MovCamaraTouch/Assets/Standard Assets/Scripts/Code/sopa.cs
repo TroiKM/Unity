@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Button : MonoBehaviour {
+public class sopa : MonoBehaviour {
 
 	public Color defaultColor;
 	public Color selectedColor;

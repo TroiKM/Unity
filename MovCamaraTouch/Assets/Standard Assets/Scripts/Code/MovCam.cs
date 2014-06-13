@@ -9,6 +9,8 @@ public class MovCam : MonoBehaviour {
 	public float rota;
 	Vector3 ring = Vector3.zero;
 
+	public float rotaCam;
+	
 	void Start() {
 
 		// Inclinamos la camara 30 grados, tambien se puede
@@ -16,6 +18,7 @@ public class MovCam : MonoBehaviour {
 		Camera.main.transform.Rotate(-30*Time.deltaTime, 0, 0);
 		speed = 0.5f;
 		rota = 4.0f;
+		rotaCam = 10;
 
 		if (ring == Vector3.zero)
 			ring = GameObject.FindGameObjectWithTag("Ring").transform.position;
@@ -47,7 +50,6 @@ public class MovCam : MonoBehaviour {
 		// i -> arriba, 0 -> abajo.
 		if 	(Input.GetKey("i"))
 			this.transform.RotateAround(ring, Vector3.right, rota * Time.deltaTime);	
-
 		if 	(Input.GetKey("o"))
 			this.transform.RotateAround(ring, Vector3.right, -rota * Time.deltaTime);	
 
