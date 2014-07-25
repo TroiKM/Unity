@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\Code\Button.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\Ludopia\colision\ColisionBeta01\Assets\Resta.cs">
     <Files>
-      <File FileName="Assets\Standard Assets\Scripts\Code\TouchInput.cs" Line="46" Column="3" />
-      <File FileName="Assets\Standard Assets\Scripts\Code\Button.cs" Line="17" Column="2" />
+      <File FileName="..\..\..\..\Ludopia\colision\ColisionBeta01\Assets\codigo\colisionv01.cs" Line="43" Column="29" />
+      <File FileName="..\..\..\..\Ludopia\colision\ColisionBeta01\Assets\Resta.cs" Line="25" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

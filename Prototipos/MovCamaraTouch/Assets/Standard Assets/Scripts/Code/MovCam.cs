@@ -20,6 +20,8 @@ public class MovCam : MonoBehaviour {
 		if (ring == Vector3.zero)
 			ring = GameObject.FindGameObjectWithTag("Ring").transform.position;
 
+		Debug.Log ("Ring: " +ring);
+
 		profMax = ring.z + 150.0f;
 		profMin = ring.z + 2.0f;
 
