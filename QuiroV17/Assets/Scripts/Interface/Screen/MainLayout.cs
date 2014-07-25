@@ -26,6 +26,7 @@ public class MainLayout : MonoBehaviour {
 	public Camera cam1;
 	public static Camera cam2;
 	public Camera cam3;
+	public static int level;
 	/*
 	 * Timers, targets, collisions
 	 */ 
@@ -194,6 +195,7 @@ public class MainLayout : MonoBehaviour {
 			cam1.enabled = false;
 			cam2.enabled = true;
 			cam3.enabled = true;
+			level = 1;
 		}
 		if (GUI.Button (new Rect (ScreenVariables.ANCHO_BUTTON, 
 		                          ScreenVariables.HEIGHT + ScreenVariables.HEIGHT_BUTTON + ScreenVariables.OFFSET, 
@@ -203,6 +205,7 @@ public class MainLayout : MonoBehaviour {
 			cam1.enabled = false;
 			cam2.enabled = true;
 			cam3.enabled = true;
+			level = 2;
 		}
 		if (GUI.Button (new Rect (ScreenVariables.ANCHO_BUTTON, 
 		                          ScreenVariables.HEIGHT + (ScreenVariables.HEIGHT_BUTTON + ScreenVariables.OFFSET) *2.0f, 
@@ -212,6 +215,7 @@ public class MainLayout : MonoBehaviour {
 			cam1.enabled = false;
 			cam2.enabled = true;
 			cam3.enabled = true;
+			level = 3;
 		}
 	}
 	void OnGUI() {

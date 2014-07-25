@@ -18,15 +18,14 @@ public class Targets : MonoBehaviour {
 	public static int seenAmountTargets;
 
 	public float rayDistance;
+	int war = 0;
 
 	// Use this for initialization
 	void Start () {
-		createLevel1 ();
-		amountTargets = 6;
-		//createLevel2 ();
-		//amountTargets = 1;
 		rayDistance = 1.0f;
 		seenAmountTargets = 0;
+		amountTargets = 1;
+		war = 0;
 	}
 
 	public GameObject createTarget (Vector3 position) {
@@ -46,13 +45,15 @@ public class Targets : MonoBehaviour {
 	 */
 	public void createLevel1 () {
 
-		createTarget (new Vector3(this.transform.position.x - 1, this.transform.position.y - 8.0f , this.transform.position.z + Random.Range(-5.0f,2.0f) ));
-		createTarget (new Vector3(this.transform.position.x + 1, this.transform.position.y - 8.0f , this.transform.position.z + Random.Range(-5.0f,2.0f) ));
-		createTarget (new Vector3(this.transform.position.x, this.transform.position.y - 8.0f , this.transform.position.z + Random.Range(0.5f,2.5f) ));
-		createTarget (new Vector3(this.transform.position.x, this.transform.position.y - 8.0f , this.transform.position.z + Random.Range(-4.0f,-5.0f) ));
-		createTarget (new Vector3(this.transform.position.x + Random.Range(1.0f,2.5f), this.transform.position.y - 8.5f , this.transform.position.z + 0.5f));
-		createTarget (new Vector3(this.transform.position.x + Random.Range(-1.0f,-2.5f), this.transform.position.y - 8.5f , this.transform.position.z + 0.5f));
-		
+		if (war == 0){
+			war++;
+			createTarget (new Vector3(this.transform.position.x - 1, this.transform.position.y - 8.0f , this.transform.position.z + Random.Range(-5.0f,2.0f) ));
+			createTarget (new Vector3(this.transform.position.x + 1, this.transform.position.y - 8.0f , this.transform.position.z + Random.Range(-5.0f,2.0f) ));
+			createTarget (new Vector3(this.transform.position.x, this.transform.position.y - 8.0f , this.transform.position.z + Random.Range(0.5f,2.5f) ));
+			createTarget (new Vector3(this.transform.position.x, this.transform.position.y - 8.0f , this.transform.position.z + Random.Range(-4.0f,-5.0f) ));
+			createTarget (new Vector3(this.transform.position.x + Random.Range(1.0f,2.5f), this.transform.position.y - 8.5f , this.transform.position.z + 0.5f));
+			createTarget (new Vector3(this.transform.position.x + Random.Range(-1.0f,-2.5f), this.transform.position.y - 8.5f , this.transform.position.z + 0.5f));
+		}
 	}
 
 	public GameObject createLevel2()
@@ -97,6 +98,20 @@ public class Targets : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (MainLayout.level == 1 && war == 0)
+		{
+			amountTargets = 6;
+			createLevel1 ();
+		} 
+		else if (MainLayout.level == 2)
+		{
+			amountTargets = 2;
+		}
+		else if (MainLayout.level == 3) 
+		{
+			amountTargets = 3;
+		}
 
 		detectTargets ();
 
